@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrazione</title>
+</head>
+<body>
+    <form name="registrazione" method="get" action="registrazione.php">
+        username <input type=text name="usr" required> <br>
+        password <input type=password name="pw" required> <br>
+        conferma password <input type=password name="cpw" required> <br>
+        cognome <input type=text name="cognome" required> <br>
+        qualifica <select name="qualifica">
+            <option value="1" selected>
+                Professionista del settore
+            </option>         
+            <option value="2">
+                Amatore
+            </option>
+            <option value="3">
+                Esperto non professionista
+            </option>
+        </select>
+        <input type="button" value="conferma" onclick="controllo()">
+    </form>
+</body>
+<script>
+    function controllo(){
+        if(registrazione.pw.value=="" || registrazione.usr.value=="" || registrazione.cpw.value=="" || registrazione.cognome.value=="")
+            alert("Non lasciare campi vuoti!")
+        else if(registrazione.pw.value == registrazione.cpw.value)
+            registrazione.submit();
+        else{
+            alert("Le password non corrispondono");
+            registrazione.pw.value="";
+            registrazione.cpw.value="";
+            registrazione.pw.focus();
+        }
+    }
+</script>
+</html>
