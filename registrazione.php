@@ -11,9 +11,9 @@ $curriculum=$_FILES['curriculum'];
 //connessione al database
 $hostname="localhost";
 $username="root";
-$pasword="";
+$password="";
 $dbname="fiera";
-$conn=new mysqli($hostname, $username, $pasword, $dbname);
+$conn=new mysqli($hostname, $username, $password, $dbname);
 //controllo di avvenuta connessione
 if ($conn->connect_error)
 	die("errore di connessione");
