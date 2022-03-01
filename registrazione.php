@@ -7,7 +7,7 @@ $_nome=$_REQUEST['nome'];
 $_email=$_REQUEST['email'];
 $_telefono=$_REQUEST['telefono'];
 $_qualifica=$_REQUEST['qualifica'];
-$_area=$_REQUEST['area'];
+#$_area=$_REQUEST['area'];
 
 
 //connessione al database
@@ -26,7 +26,7 @@ if ($tabella-> num_rows == 1)
   echo("Utente già esistente");
 else {
   $_query1="INSERT INTO espositori(username,password,cognome,nome,email,qualifica,area,telefono)
-          VALUES ('{$_usr}','{$_pw}','{$_cognome}','{$_nome}','{$_email}',{$_qualifica},{$_area},'{$_telefono}')";
+          VALUES ('{$_usr}','{$_pw}','{$_cognome}','{$_nome}','{$_email}',{$_qualifica},1,'{$_telefono}')";
 echo $_query1;
 $ris=$conn->query($_query1);
 if ($ris)
