@@ -8,18 +8,18 @@
 </head>
 <body>
     <form name="registrazione" method="get" action="registrazione.php">
-        username <input type="text" name="usr" required> <br>
-        password <input type="password" name="pw" required> <br>
-        conferma password <input type="password" name="cpw" required> <br>
-        cognome <input type="text" name="cognome" required> <br>
-        nome <input type="text" name="nome" required> <br>
-        mail <input type="text" name="mail" required> <br>
-        telefono <input type="text" name="telefono" required> <br>
-        curriculum <input type="file" name="curriculum" required><br>
+        Username <input type=text name="usr" required> <br>
+        Password <input type=password name="pw" required> <br>
+        Conferma Password <input type=password name="cpw" required> <br>
+        Cognome <input type=text name="cognome" required> <br>
+        Nome <input type=text name="nome" required> <br>
+        Mail <input type="text" name="mail" required> <br>
+        Numero di Telefono <input type="text" name="telefono" required><br>
+        Curriculum <input type="file" name="curriculum"><br>
         qualifica <select name="qualifica">
             <option value="1" selected>
                 Professionista del settore
-            </option>         
+            </option>
             <option value="2">
                 Amatore
             </option>
@@ -32,7 +32,8 @@
 </body>
 <script>
     function controllo(){
-        if(registrazione.pw.value=="" || registrazione.usr.value=="" || registrazione.cpw.value=="" || registrazione.cognome.value=="")
+        if(registrazione.pw.value=="" || registrazione.usr.value=="" || registrazione.cpw.value=="" || registrazione.cognome.value=="" ||
+        registrazione.nome.value=="" || registrazione.mail.value=="" || registrazione.telefono.value=="")
             alert("Non lasciare campi vuoti!")
         else if(registrazione.pw.value == registrazione.cpw.value)
             registrazione.submit();
